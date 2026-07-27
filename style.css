@@ -190,9 +190,39 @@ h2{
 
 }
 
-/* Skill List */
+/* ==========================
+   SKILLS & CERTIFICATIONS
+========================== */
 
-.skills{
+#skills{
+
+    padding:80px 0;
+
+    background:#f8f9fa;
+
+}
+
+/* Section Categories */
+
+.skill-category{
+
+    margin-top:50px;
+
+}
+
+.skill-category h3{
+
+    color:#0B6E99;
+
+    margin-bottom:20px;
+
+    font-size:1.5rem;
+
+}
+
+/* Skill Badges */
+
+.skills-grid{
 
     display:flex;
 
@@ -213,6 +243,110 @@ h2{
     border-radius:30px;
 
     font-weight:600;
+
+    box-shadow:0 4px 10px rgba(11,110,153,0.25);
+
+    transition:all .3s ease;
+
+    cursor:default;
+
+}
+
+.skill:hover{
+
+    transform:translateY(-4px);
+
+    background:#E4A208;
+
+    color:white;
+
+    box-shadow:0 8px 18px rgba(228,162,8,.35);
+
+}
+
+/* ==========================
+   CERTIFICATIONS
+========================== */
+
+.certification-card{
+
+    background:white;
+
+    padding:30px;
+
+    margin-top:10px;
+
+    border-left:6px solid #E4A208;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    transition:all .3s ease;
+
+}
+
+.certification-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+
+.certification-card h4{
+
+    color:#0B6E99;
+
+    margin-bottom:10px;
+
+}
+
+.issuer{
+
+    font-weight:600;
+
+    color:#444;
+
+    margin-bottom:5px;
+
+}
+
+.cert-date{
+
+    color:#666;
+
+    font-size:.9rem;
+
+    margin-bottom:15px;
+
+}
+
+.certification-card{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+.verify-link{
+
+    margin-top:20px;
+
+    color:#0B6E99;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.certification-card:hover .verify-link{
+
+    color:#E4A208;
 
 }
 
@@ -275,5 +409,127 @@ h2{
 .project-button:hover{
 
     background:#084d6d;
+
+}
+
+/* ==========================
+   EDUCATION
+========================== */
+
+#education{
+
+    padding:80px 0;
+
+    background:#ffffff;
+
+}
+
+.timeline{
+
+    position:relative;
+
+    margin-top:40px;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:12px;
+
+    top:0;
+
+    width:3px;
+
+    height:100%;
+
+    background:#0B6E99;
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    padding-left:50px;
+
+    margin-bottom:50px;
+
+}
+
+.timeline-dot{
+
+    position:absolute;
+
+    left:0;
+
+    top:5px;
+
+    width:25px;
+
+    height:25px;
+
+    background:#FFD166;
+
+    border:4px solid #0B6E99;
+
+    border-radius:50%;
+
+}
+
+.timeline-content{
+
+    background:#f8f9fa;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.timeline-content h3{
+
+    color:#0B6E99;
+
+    margin-bottom:5px;
+
+}
+
+.timeline-content h4{
+
+    font-size:1rem;
+
+    margin-bottom:10px;
+
+}
+
+.timeline-content span{
+
+    display:block;
+
+    margin-bottom:15px;
+
+    color:#666;
+
+    font-size:.9rem;
+
+}
+
+/* Experience Category */
+
+.experience-category{
+
+    color:#0B6E99;
+
+    margin-top:50px;
+
+    margin-bottom:25px;
+
+    font-size:1.5rem;
 
 }
