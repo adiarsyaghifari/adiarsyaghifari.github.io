@@ -562,60 +562,90 @@ h2{
 
     flex-direction:column;
 
-    gap:25px;
+    gap:18px;
 
 }
 
-.contact-item{
+.contact-card{
 
     display:flex;
 
-    align-items:flex-start;
+    align-items:center;
 
-    gap:18px;
+    gap:20px;
+
+    background:white;
+
+    padding:18px 22px;
+
+    border-radius:12px;
 
     text-decoration:none;
 
     color:#333;
 
-    transition:.25s ease;
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
 
-}
-
-.contact-item:hover{
-
-    transform:translateX(8px);
+    transition:background .25s ease, color .25s ease;
 
 }
 
 .contact-icon{
 
-    font-size:1.8rem;
+    font-size:1.5rem;
 
-    width:40px;
+    color:#888;
 
-    text-align:center;
+    width:28px;
+
+    transition:color .25s ease;
 
 }
 
-.contact-item h3{
+.contact-card h3{
 
-    color:#0B6E99;
+    color:#333;
 
     margin-bottom:4px;
 
-    font-size:1.15rem;
+    transition:color .25s ease;
 
 }
 
-.contact-item p{
+.contact-card p{
 
-    color:#555;
+    color:#666;
+
+    transition:color .25s ease;
 
 }
 
-.contact-item small{
+.contact-card small{
 
     color:#888;
+
+}
+
+/* Keep card appearance unchanged */
+
+.contact-card{
+
+    background:white;
+
+}
+
+/* Only the link text changes */
+
+.contact-card p{
+
+    color:#666;
+
+    transition:color .25s ease;
+
+}
+
+.contact-card:hover p{
+
+    color:#0B6E99;
 
 }
