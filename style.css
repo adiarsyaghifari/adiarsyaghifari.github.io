@@ -766,18 +766,6 @@ h2{
    CASE STUDY
 ========================== */
 
-#project-viewer{
-
-    background:white;
-
-    border-radius:14px;
-
-    padding:40px;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-
-}
-
 .case-study-header{
 
     margin-bottom:30px;
@@ -893,26 +881,6 @@ h2{
 }
 
 /* ==========================
-   MOBILE
-========================== */
-
-@media(max-width:900px){
-
-    .project-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .case-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-
-/* ==========================
    PROJECT MODAL
 ========================== */
 
@@ -998,11 +966,79 @@ h2{
 
 }
 
-@media(max-width:768px){
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:900px){
+
+    /* Navigation */
+
+    nav{
+
+        overflow-x:auto;
+        white-space:nowrap;
+
+    }
+
+    nav::-webkit-scrollbar{
+
+        display:none;
+
+    }
+
+    nav a{
+
+        display:inline-block;
+        margin:0 12px;
+        font-size:.9rem;
+
+    }
+
+    /* Featured Projects */
+
+    .project-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .project-card{
+
+        padding:24px;
+
+    }
+
+    .project-kpis{
+
+        gap:12px;
+
+    }
+
+    .project-button{
+
+        width:100%;
+
+    }
+
+    /* Case Study */
+
+    .case-grid{
+
+        grid-template-columns:1fr;
+
+    }
+}
+
+/* Smaller phones */
+
+@media (max-width:768px){
 
     .modal-content{
 
+        width:95%;
         padding:25px;
+        max-height:90vh;
 
     }
 
