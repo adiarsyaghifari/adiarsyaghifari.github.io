@@ -14,7 +14,7 @@ const projects = {
 
         github: null,
 
-        dashboard: null,
+        dashboard: "https://drive.google.com/file/d/109j7pUzU9skUYBuR8lneeyKTffcXy0fG/view?usp=sharing",
 
         html: `
 
@@ -142,7 +142,7 @@ const projects = {
 
     racing: {
 
-        title: "Horse Racing Analytics",
+        title: "TBA",
 
         subtitle: "Python • Research",
 
@@ -157,7 +157,7 @@ const projects = {
             <h3>Coming Soon</h3>
 
             <p>
-                Horse Racing case study will be added next.
+                TBA
             </p>
 
         `
