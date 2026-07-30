@@ -12,15 +12,17 @@ const projects = {
 
         image: "assets/stockout-dashboard.png",
 
-        github: "#",
+        github: null,
 
-        dashboard: "#",
+        dashboard: null,
 
         html: `
 
-            <div class="case-grid">
+        <div class="details-content">
+        
+            <div class="details-grid">
 
-                <div class="case-card">
+                <div class="details-card">
 
                     <h4>
                         <i class="fas fa-circle-question"></i>
@@ -38,7 +40,7 @@ const projects = {
 
                 </div>
 
-                <div class="case-card">
+                <div class="details-card">
 
                     <h4>
 
@@ -62,7 +64,7 @@ const projects = {
 
                 </div>
 
-                <div class="case-card">
+                <div class="details-card">
 
                     <h4>
 
@@ -84,7 +86,7 @@ const projects = {
 
                 </div>
 
-                <div class="case-card">
+                <div class="details-card">
 
                     <h4>
 
@@ -108,6 +110,8 @@ const projects = {
 
             </div>
 
+        </div>
+            
         `
 
     },
@@ -120,9 +124,9 @@ const projects = {
 
         image: "assets/hospital-dashboard.png",
 
-        github: "#",
+        github: null,
 
-        dashboard: "#",
+        dashboard: null,
 
         html: `
 
@@ -144,9 +148,9 @@ const projects = {
 
         image: "assets/racing-dashboard.png",
 
-        github: "#",
+        github: null,
 
-        dashboard: "#",
+        dashboard: null,
 
         html: `
 
@@ -180,11 +184,13 @@ function openProject(projectKey){
 
     const project = projects[projectKey];
 
+    if (!project) return;
+
     modalBody.innerHTML = `
 
-        <div class="case-study">
-
-            <div class="case-study-header">
+        <div class="details">
+    
+            <div class="details-header">
 
                 <div>
 
@@ -206,41 +212,60 @@ function openProject(projectKey){
 
             <img
                 src="${project.image}"
-                class="case-study-image">
+                alt="${project.title} Dashboard"
+                class="details-image"
+                loading="lazy"
+                decoding="async">
 
             ${project.html}
 
-            <div class="case-buttons">
+            ${project.github || project.dashboard ? `
+
+            <div class="details-buttons">
+
+                ${project.github ? `
 
                 <a
                     href="${project.github}"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="project-button">
 
                     <i class="fab fa-github"></i>
 
-                    GitHub
+                    GitHub Repository
 
                 </a>
+
+                ` : ""}
+
+                ${project.dashboard ? `
 
                 <a
                     href="${project.dashboard}"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="project-button">
 
                     <i class="fas fa-chart-bar"></i>
 
-                    Dashboard
+                    Interactive Dashboard
 
                 </a>
 
+                ` : ""}
+
             </div>
+
+            ` : ""}
 
         </div>
 
     `;
 
     modal.style.display = "block";
+
+    document.body.style.overflow = "hidden";
 
 }
 
@@ -269,6 +294,7 @@ document.querySelectorAll(".view-project").forEach(button=>{
 closeButton.addEventListener("click",()=>{
 
     modal.style.display="none";
+    document.body.style.overflow = "";
 
 });
 
@@ -277,6 +303,7 @@ window.addEventListener("click",(e)=>{
     if(e.target===modal){
 
         modal.style.display="none";
+        document.body.style.overflow = "";
 
     }
 
@@ -287,6 +314,7 @@ document.addEventListener("keydown",(e)=>{
     if(e.key==="Escape"){
 
         modal.style.display="none";
+        document.body.style.overflow = "";
 
     }
 

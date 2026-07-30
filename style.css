@@ -763,16 +763,16 @@ h2{
 }
 
 /* ==========================
-   CASE STUDY
+   Details Section
 ========================== */
 
-.case-study-header{
+.details-header{
 
     margin-bottom:30px;
 
 }
 
-.case-study-header h3{
+.details-header h3{
 
     color:#0B6E99;
 
@@ -780,9 +780,13 @@ h2{
 
 }
 
-.case-study-image{
+.details-image{
 
     width:100%;
+
+    display:block;
+    
+    object-fit:contain;
 
     border-radius:12px;
 
@@ -790,7 +794,7 @@ h2{
 
 }
 
-.case-grid{
+.details-grid{
 
     display:grid;
 
@@ -802,7 +806,13 @@ h2{
 
 }
 
-.case-card{
+.details-content{
+
+    margin-top:35px;
+
+}
+
+.details-card{
 
     background:#F8F9FA;
 
@@ -812,7 +822,7 @@ h2{
 
 }
 
-.case-card h4{
+.details-card h4{
 
     color:#0B6E99;
 
@@ -820,13 +830,13 @@ h2{
 
 }
 
-.case-card h4 i{
+.details-card h4 i{
 
     margin-right:10px;
 
 }
 
-.case-card ul{
+.details-card ul{
 
     padding-left:18px;
 
@@ -834,7 +844,7 @@ h2{
 
 }
 
-.case-buttons{
+.details-buttons{
 
     display:flex;
 
@@ -849,14 +859,12 @@ h2{
     display:flex;
 
     align-items:center;
-
+    
     justify-content:center;
-
+    
     gap:10px;
 
-    width:100%;
-
-    margin-top:auto;
+    width:auto;
 
     text-decoration:none;
 
@@ -1009,6 +1017,13 @@ h2{
 
     }
 
+    .project-card:hover{
+
+        transform:none;
+
+    }
+
+
     .project-kpis{
 
         gap:12px;
@@ -1021,9 +1036,9 @@ h2{
 
     }
 
-    /* Case Study */
+    /* Details */
 
-    .case-grid{
+    .details-grid{
 
         grid-template-columns:1fr;
 
@@ -1039,6 +1054,13 @@ h2{
         width:95%;
         padding:25px;
         max-height:90vh;
+        overflow-y:auto;
+
+    }
+
+    .modal{
+
+    padding:20px 10px;
 
     }
 
