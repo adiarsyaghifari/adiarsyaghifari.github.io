@@ -195,62 +195,245 @@
 
     </section>
 
-    <section id="projects">
+<!-- =========================
+     Featured Projects
+========================== -->
 
-        <h2>Projects</h2>
+<section id="projects">
 
-        <p>
-            <div class="project-grid">
+    <div class="container">
 
-                <div class="project-card">
+        <h2>
+            <i class="fas fa-chart-line"></i>
+            Featured Projects
+        </h2>
 
-                    <h3>🏥 Hospital Dashboard</h3>
-
-                    <p>
-                        Interactive Tableau dashboard to monitor
-                        hospital operational performance across
-                        multiple branches.
-                    </p>
-
-                    <a href="#" class="project-button">
-                        View Project →
-                    </a>
-
-                </div>
-
-                <div class="project-card">
-
-                    <h3>🏦 Bank Customer Segmentation</h3>
-
-                    <p>Interactive Tableau dashboard to monitor 
-                        SQL and Tableau analysis for identifying 
-                        high-value customers.
-                    </p>
-
-                    <a href="#" class="project-button">
-                        View Project →
-                    </a>
-                </div>
-
-                <div class="project-card">
-
-                    <h3>Horse Racing Analytics</h3>
-            
-                    <p>Interactive Tableau dashboard to monitor 
-                        Pedigree and auction analysis using 
-                        Python and spreadsheets.
-                    </p>
-                    
-                    <a href="#" class="project-button">
-                        View Project →
-                    </a>
-
-                </div>
-
-            </div>
+        <p class="section-description">
+            A selection of end-to-end analytics projects demonstrating how I transform
+            business problems into actionable insights through data analysis,
+            visualization, and strategic recommendations.
         </p>
 
-    </section>
+        <!-- =========================
+             Project Cards
+        ========================== -->
+
+        <div class="project-grid">
+
+            <!-- Stockout -->
+
+            <div class="project-card active-card"
+                 data-project="stockout">
+
+                <div class="project-icon">
+
+                    <i class="fas fa-boxes-stacked"></i>
+
+                </div>
+
+                <h3>Stockout Analysis</h3>
+
+                <p>
+
+                    Identified hidden revenue loss caused by inventory shortages
+                    across retail stores and developed data-driven replenishment
+                    recommendations.
+
+                </p>
+
+                <div class="project-tags">
+
+                    <span>Python</span>
+
+                    <span>Power BI</span>
+
+                    <span>Retail</span>
+
+                </div>
+
+                <div class="project-kpis">
+
+                    <div>
+
+                        <h4>4.83%</h4>
+
+                        <small>Stockout Rate</small>
+
+                    </div>
+
+                    <div>
+
+                        <h4>$10K+</h4>
+
+                        <small>Lost Revenue</small>
+
+                    </div>
+
+                    <div>
+
+                        <h4>50</h4>
+
+                        <small>Stores</small>
+
+                    </div>
+
+                </div>
+
+                <button class="project-button view-project" type="button">
+
+                    View Case Study
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+            <!-- Hospital -->
+
+            <div class="project-card"
+                 data-project="hospital">
+
+                <div class="project-icon">
+
+                    <i class="fas fa-hospital"></i>
+
+                </div>
+
+                <h3>Hospital Operations Dashboard</h3>
+
+                <p>
+
+                    Built an operational dashboard to evaluate patient throughput,
+                    doctor workload, and hospital resource utilization.
+
+                </p>
+
+                <div class="project-tags">
+
+                    <span>Tableau</span>
+
+                    <span>SQL</span>
+
+                    <span>Healthcare</span>
+
+                </div>
+
+                <div class="project-kpis">
+
+                    <div>
+
+                        <h4>5.5×</h4>
+
+                        <small>Workload Gap</small>
+
+                    </div>
+
+                    <div>
+
+                        <h4>37%</h4>
+
+                        <small>Peak Workload</small>
+
+                    </div>
+
+                    <div>
+
+                        <h4>6</h4>
+
+                        <small>Data Tables</small>
+
+                    </div>
+
+                </div>
+
+                <button class="project-button view-project" type="button">
+
+                    View Case Study
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+            <!-- Horse Racing -->
+
+            <div class="project-card"
+                 data-project="racing">
+
+                <div class="project-icon">
+
+                    <i class="fas fa-horse"></i>
+
+                </div>
+
+                <h3>Horse Racing Analytics</h3>
+
+                <p>
+
+                    Independent research project analyzing pedigree,
+                    ownership, auction trends, and racing performance
+                    using data-driven investigation.
+
+                </p>
+
+                <div class="project-tags">
+
+                    <span>Python</span>
+
+                    <span>Research</span>
+
+                    <span>Sports</span>
+
+                </div>
+
+                <div class="project-kpis">
+
+                    <div>
+
+                        <h4>500+</h4>
+
+                        <small>Records</small>
+
+                    </div>
+
+                    <div>
+
+                        <h4>3</h4>
+
+                        <small>Data Sources</small>
+
+                    </div>
+
+                    <div>
+
+                        <h4>100%</h4>
+
+                        <small>Personal Project</small>
+
+                    </div>
+
+                </div>
+
+                <button class="project-button view-project" type="button">
+
+                    View Case Study
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
 
     <section id="experience">
 
@@ -486,6 +669,25 @@
         </div>
 
     </section>
+
+
+<!-- =========================
+     Project Modal
+========================= -->
+
+<div id="projectModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close-modal">&times;</span>
+
+        <div id="modalBody">
+
+        </div>
+
+    </div>
+
+</div>
 
 <script src="script.js"></script>
 

@@ -350,67 +350,6 @@ h2{
 
 }
 
-/* Projects */
-
-.project-grid{
-
-    display:flex;
-
-    gap:20px;
-
-    flex-wrap:wrap;
-
-}
-
-.project-card{
-
-    flex:1;
-
-    min-width:260px;
-
-    background:white;
-
-    padding:25px;
-
-    border-radius:12px;
-
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-
-    transition:0.3s;
-
-}
-
-.project-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.project-button{
-
-    display:inline-block;
-
-    margin-top:20px;
-
-    text-decoration:none;
-
-    background:#0B6E99;
-
-    color:white;
-
-    padding:10px 20px;
-
-    border-radius:8px;
-
-    transition:0.3s;
-
-}
-
-.project-button:hover{
-
-    background:#084d6d;
-
-}
 
 /* ==========================
    EDUCATION
@@ -647,5 +586,424 @@ h2{
 .contact-card:hover p{
 
     color:#0B6E99;
+
+}
+
+
+/* ===========================================
+   FEATURED PROJECTS
+=========================================== */
+
+#projects{
+
+    padding:80px 0;
+
+}
+
+.section-description{
+
+    max-width:700px;
+
+    margin:20px auto 50px;
+
+    color:#666;
+
+    text-align:center;
+
+    line-height:1.8;
+
+}
+
+.project-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-bottom:50px;
+
+}
+
+.project-card{
+
+    background:white;
+
+    border-radius:14px;
+
+    padding:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    border:2px solid transparent;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#0B6E99;
+
+}
+
+.project-card.active-card{
+
+    border-color:#0B6E99;
+
+}
+
+.project-icon{
+
+    width:65px;
+
+    height:65px;
+
+    background:#EAF6FB;
+
+    color:#0B6E99;
+
+    border-radius:16px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+.project-card h3{
+
+    color:#0B6E99;
+
+    margin-bottom:15px;
+
+}
+
+.project-card p{
+
+    color:#666;
+
+    flex-grow:1;
+
+    line-height:1.7;
+
+}
+
+.project-tags{
+
+    display:flex;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+
+    margin:20px 0;
+
+}
+
+.project-tags span{
+
+    background:#EAF6FB;
+
+    color:#0B6E99;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+}
+
+.project-kpis{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    text-align:center;
+
+    margin:25px 0;
+
+    padding:18px 0;
+
+    border-top:1px solid #eee;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.project-kpis h4{
+
+    color:#0B6E99;
+
+    font-size:1.5rem;
+
+}
+
+.project-kpis small{
+
+    color:#777;
+
+}
+
+/* ==========================
+   CASE STUDY
+========================== */
+
+#project-viewer{
+
+    background:white;
+
+    border-radius:14px;
+
+    padding:40px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.case-study-header{
+
+    margin-bottom:30px;
+
+}
+
+.case-study-header h3{
+
+    color:#0B6E99;
+
+    margin-bottom:8px;
+
+}
+
+.case-study-image{
+
+    width:100%;
+
+    border-radius:12px;
+
+    margin-bottom:35px;
+
+}
+
+.case-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+    margin-bottom:35px;
+
+}
+
+.case-card{
+
+    background:#F8F9FA;
+
+    border-radius:12px;
+
+    padding:25px;
+
+}
+
+.case-card h4{
+
+    color:#0B6E99;
+
+    margin-bottom:15px;
+
+}
+
+.case-card h4 i{
+
+    margin-right:10px;
+
+}
+
+.case-card ul{
+
+    padding-left:18px;
+
+    line-height:1.8;
+
+}
+
+.case-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.project-button{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    width:100%;
+
+    margin-top:auto;
+
+    text-decoration:none;
+
+    background:#0B6E99;
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.project-button:hover{
+
+    background:#084d6d;
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:900px){
+
+    .project-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .case-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ==========================
+   PROJECT MODAL
+========================== */
+
+.modal{
+
+    display:none;
+
+    position:fixed;
+
+    z-index:9999;
+
+    inset:0;
+
+    background:rgba(0,0,0,.6);
+
+    backdrop-filter:blur(5px);
+
+    overflow-y:auto;
+
+    padding:50px 20px;
+
+}
+
+.modal-content{
+
+    background:white;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    border-radius:16px;
+
+    padding:40px;
+
+    position:relative;
+
+    animation:modalFade .25s ease;
+
+}
+
+.close-modal{
+
+    position:absolute;
+
+    top:20px;
+
+    right:25px;
+
+    font-size:32px;
+
+    cursor:pointer;
+
+    color:#888;
+
+    transition:.3s;
+
+}
+
+.close-modal:hover{
+
+    color:#0B6E99;
+
+}
+
+@keyframes modalFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .modal-content{
+
+        padding:25px;
+
+    }
 
 }
