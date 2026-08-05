@@ -754,11 +754,8 @@ h2 i{
 }
 
 /* Tablet & small laptop */
-@media (max-width:900px){
 
-    section{
-        padding:52px 0;
-    }
+@media (max-width:900px){
 
     /* Navigation */
 
@@ -1052,9 +1049,6 @@ html[data-theme="dark"] .close-modal {
 
 /* Mobile tweaks: slightly reduce vertical padding for smaller screens */
 @media (max-width:600px){
-    section{
-        padding:36px 0;
-    }
 
     .section-description{
         margin:14px 0 28px 0;
