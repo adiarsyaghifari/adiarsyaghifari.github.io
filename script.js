@@ -185,19 +185,6 @@ const projects = {
             <div class="details-card">
 
                 <h4>
-                    <i class="fas fa-bullseye"></i>
-                    Objectives
-                </h4>
-
-                <p>
-                    Create a unified Tableau data model from six relational datasets to support cross-branch operational analysis and more informed decision-making.
-                </p>
-
-            </div>
-
-            <div class="details-card">
-
-                <h4>
                     <i class="fas fa-chart-line"></i>
                     Key Insights
                 </h4>
