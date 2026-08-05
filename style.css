@@ -755,9 +755,11 @@ h2 i{
 /* Mobile */
 @media (max-width:640px){
 
-    /* Justify reads unevenly on very narrow columns, so keep it left-aligned here */
     #about p{
-        text-align:left;
+        text-align:justify;
+        text-justify:inter-word;
+        text-align-last:left;
+        hyphens:none;
     }
 
     section{
