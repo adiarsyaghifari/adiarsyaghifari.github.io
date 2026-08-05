@@ -260,112 +260,64 @@ const projects = {
 const modal = document.getElementById("projectModal");
 
 const modalBody = document.getElementById("modalBody");
-
 const closeButton = document.querySelector(".close-modal");
-
-// ===========================
-// Open Project
-// ===========================
+const backToTopButton = document.getElementById("backToTop");
 
 function openProject(projectKey){
-
     const project = projects[projectKey];
-
     if (!project) return;
 
     modalBody.innerHTML = `
-
         <div class="details">
-    
             <div class="details-header">
-
                 <div>
-
-                    <h2>
-
-                        ${project.title}
-
-                    </h2>
-
-                    <p>
-
-                        ${project.subtitle}
-
-                    </p>
-
+                    <h2>${project.title}</h2>
+                    <p>${project.subtitle}</p>
                 </div>
-
             </div>
-
             <div class="dashboard-preview">
-
                 <div class="browser-bar">
-
                     <span></span>
                     <span></span>
                     <span></span>
-
                 </div>
-
                 <img
                     src="${project.image}"
                     alt="${project.title} Dashboard"
                     class="details-image"
                     loading="lazy"
                     decoding="async">
-
             </div>
-
             ${project.html}
-
             ${project.github || project.dashboard ? `
-
             <div class="details-buttons">
-
                 ${project.github ? `
-
                 <a
                     href="${project.github}"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="project-button">
-
                     <i class="fab fa-github"></i>
-
                     GitHub Repository
-
                 </a>
-
                 ` : ""}
-
                 ${project.dashboard ? `
-
                 <a
                     href="${project.dashboard}"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="project-button">
-
                     <i class="fas fa-chart-bar"></i>
-
                     Interactive Dashboard
-
                 </a>
-
                 ` : ""}
-
             </div>
-
             ` : ""}
-
         </div>
-
     `;
 
     modal.style.display = "block";
-
     document.body.style.overflow = "hidden";
-
 }
 
 // ===========================
@@ -453,7 +405,7 @@ function getPreferredTheme(){
 
 function initTheme(){
     const savedTheme = getSavedTheme();
-    const theme = savedTheme || 'light';
+    const theme = savedTheme || getPreferredTheme();
     setTheme(theme);
 }
 
@@ -482,5 +434,18 @@ function updateToggleOnScroll(){
 
 window.addEventListener('scroll', updateToggleOnScroll, {passive:true});
 window.addEventListener('resize', updateToggleOnScroll);
-// initial set
+
+function updateBackToTop(){
+    if(!backToTopButton) return;
+    backToTopButton.classList.toggle('visible', window.scrollY > 120);
+}
+
+backToTopButton?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+window.addEventListener('scroll', updateBackToTop, {passive:true});
+window.addEventListener('load', updateBackToTop);
+
 updateToggleOnScroll();
+updateBackToTop();
