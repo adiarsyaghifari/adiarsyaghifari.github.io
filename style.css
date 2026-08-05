@@ -160,8 +160,9 @@ h2 i{
 #about p{
     color:#444;
     text-align:justify;
+    text-justify:inter-word;
     text-align-last:left;
-    hyphens:auto;
+    hyphens:none;
 }
 
 /* ==========================
