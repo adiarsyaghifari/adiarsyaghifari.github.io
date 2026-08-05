@@ -433,10 +433,6 @@ h2 i{
     border-color:var(--primary);
 }
 
-.project-card.active-card{
-    border-color:var(--primary);
-}
-
 .project-icon{
     width:65px;
     height:65px;
