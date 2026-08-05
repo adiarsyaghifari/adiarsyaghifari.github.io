@@ -32,7 +32,7 @@ section{
 .container{
     max-width:1080px;
     margin:0 auto;
-    padding:0 0px;
+    padding:0 16px;
 }
 
 /* Header */
@@ -1050,12 +1050,8 @@ html[data-theme="dark"] .close-modal {
     }
 }
 
-/* Mobile tweaks: add horizontal padding so content isn't cramped */
+/* Mobile tweaks: slightly reduce vertical padding for smaller screens */
 @media (max-width:600px){
-    .container{
-        padding:0 16px;
-    }
-
     section{
         padding:36px 0;
     }
