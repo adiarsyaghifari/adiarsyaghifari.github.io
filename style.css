@@ -40,7 +40,7 @@ section{
 header{
     background:#0B6E99;
     color:white;
-    padding:56px 20px;
+    padding:36px 20px;
 }
 
 /* Hero Layout */
@@ -55,11 +55,11 @@ header{
 }
 
 .hero img{
-    width:200px;
-    height:200px;
+    width:150px;
+    height:150px;
     border-radius:50%;
     object-fit:cover;
-    border:5px solid white;
+    border:4px solid white;
     flex-shrink:0;
 }
 
@@ -158,8 +158,10 @@ h2 i{
 }
 
 #about p{
-    max-width:720px;
     color:#444;
+    text-align:justify;
+    text-align-last:left;
+    hyphens:auto;
 }
 
 /* ==========================
@@ -731,6 +733,11 @@ h2 i{
 
 /* Mobile */
 @media (max-width:640px){
+
+    /* Justify reads unevenly on very narrow columns, so keep it left-aligned here */
+    #about p{
+        text-align:left;
+    }
 
     section{
         padding:44px 0;
