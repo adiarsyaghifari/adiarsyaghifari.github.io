@@ -16,6 +16,8 @@ const projects = {
 
         dashboard: "https://drive.google.com/file/d/109j7pUzU9skUYBuR8lneeyKTffcXy0fG/view?usp=sharing",
 
+        deck: "https://docs.google.com/presentation/d/1G1tIYhhc6BK1EIPfzaHFEWzfMsNjOcvgWLmaUYhi_UU/edit?usp=sharing",
+
         html: `
 
         <div class="details-content">
@@ -120,7 +122,7 @@ const projects = {
 
     hospital: {
 
-    title: "Revo Hospital: Optimizing Patient Throughput & Bed Capacity",
+    title: "Optimizing Patient Throughput & Bed Capacity",
 
     subtitle: "Tableau • Healthcare Analytics • Dashboard Design",
 
@@ -129,6 +131,8 @@ const projects = {
     github: null,
 
     dashboard: "https://public.tableau.com/app/profile/adiarsya.ghifari/viz/RevoHospital-OptimizingPatientThroughputBedCapacityAcrossJava_17794690057640/Dashboard1",
+
+    deck: "https://docs.google.com/presentation/d/15mJzstYbJaVLAuHhV4WQF_NujvPBgkKIIsaS4AsRyPc/edit?usp=sharing",
 
     html: `
 
@@ -274,6 +278,16 @@ function openProject(projectKey){
                     <h2>${project.title}</h2>
                     <p>${project.subtitle}</p>
                 </div>
+                ${project.dashboard ? `
+                <a
+                    href="${project.dashboard}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-button project-button--inline">
+                    <i class="fas fa-chart-bar"></i>
+                    Interactive Dashboard
+                </a>
+                ` : ""}
             </div>
             <div class="dashboard-preview">
                 <div class="browser-bar">
@@ -289,7 +303,7 @@ function openProject(projectKey){
                     decoding="async">
             </div>
             ${project.html}
-            ${project.github || project.dashboard ? `
+            ${project.github || project.dashboard || project.deck ? `
             <div class="details-buttons">
                 ${project.github ? `
                 <a
@@ -309,6 +323,16 @@ function openProject(projectKey){
                     class="project-button">
                     <i class="fas fa-chart-bar"></i>
                     Interactive Dashboard
+                </a>
+                ` : ""}
+                ${project.deck ? `
+                <a
+                    href="${project.deck}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-button project-button--secondary">
+                    <i class="fas fa-file-lines"></i>
+                    View Deck
                 </a>
                 ` : ""}
             </div>

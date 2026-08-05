@@ -528,11 +528,36 @@ h2 i{
 
 .details-header{
     margin-bottom:28px;
+    display:flex;
+    justify-content:space-between;
+    gap:24px;
+    align-items:flex-start;
+    padding-right:40px;
 }
 
 .details-header h3{
     color:var(--primary);
     margin-bottom:8px;
+}
+
+.project-button--inline{
+    white-space:nowrap;
+    padding:8px 12px;
+    font-size:0.9rem;
+    min-height:auto;
+    gap:8px;
+    flex-shrink:0;
+}
+
+@media (max-width:720px){
+    .details-header{
+        flex-direction:column;
+        align-items:flex-start;
+        padding-right:0;
+    }
+    .project-button--inline{
+        width:100%;
+    }
 }
 
 .details-image{
@@ -594,6 +619,16 @@ h2 i{
     border-radius:8px;
     transition:.3s;
     font-weight:600;
+}
+
+.project-button--secondary{
+    background:transparent;
+    color:var(--primary);
+    border-color:var(--primary);
+}
+
+.project-button--secondary:hover{
+    background:rgba(11,110,153,0.08);
 }
 
 .project-button:hover{
