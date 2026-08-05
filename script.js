@@ -297,12 +297,24 @@ function openProject(projectKey){
 
             </div>
 
-            <img
-                src="${project.image}"
-                alt="${project.title} Dashboard"
-                class="details-image"
-                loading="lazy"
-                decoding="async">
+            <div class="dashboard-preview">
+
+                <div class="browser-bar">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+                <img
+                    src="${project.image}"
+                    alt="${project.title} Dashboard"
+                    class="details-image"
+                    loading="lazy"
+                    decoding="async">
+
+            </div>
 
             ${project.html}
 
