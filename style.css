@@ -169,18 +169,20 @@ h2 i{
 ========================== */
 
 #skills{
-    background:#eef1f5;
+    background:#ffffff;
 }
 
 /* Section Categories */
 
 .skill-category{
     margin-top:38px;
+    padding-left:18px;
 }
 
 .skill-category h3{
     color:#0B6E99;
     margin-bottom:16px;
+    padding: 0 10px;
     font-size:1.3rem;
     font-weight:600;
 }
@@ -266,7 +268,7 @@ h2 i{
 ========================== */
 
 #projects{
-    background:#ffffff;
+    background:#f8f9fa;
 }
 
 .section-description{
@@ -474,7 +476,7 @@ h2 i{
 ========================== */
 
 #experience{
-    background:#eef1f5;
+    background:#f8f9fa;
 }
 
 .timeline{
@@ -564,7 +566,7 @@ h2 i{
 ========================== */
 
 #contact{
-    background:#eef1f5;
+    background:#f8f9fa;
 }
 
 .contact-description{
