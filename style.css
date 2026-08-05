@@ -117,6 +117,19 @@ nav{
     position:sticky;
     top:0;
     z-index:1000;
+    overflow:hidden;
+}
+
+nav::after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width:48px;
+    height:100%;
+    pointer-events:none;
+    background:linear-gradient(to left, rgba(34,34,34,1), rgba(34,34,34,0));
+    display:none;
 }
 
 nav a{
@@ -703,6 +716,11 @@ h2 i{
         overflow-x:auto;
         white-space:nowrap;
         text-align:left;
+        position:relative;
+    }
+
+    nav::after{
+        display:block;
     }
 
     nav::-webkit-scrollbar{
