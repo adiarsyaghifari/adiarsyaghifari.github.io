@@ -32,7 +32,7 @@ section{
 .container{
     max-width:1080px;
     margin:0 auto;
-    padding:0 10px;
+    padding:0 0px;
 }
 
 /* Header */
@@ -113,7 +113,8 @@ header{
 nav{
     background:#222;
     text-align:center;
-    padding:3px 10px;
+    padding:3px 10px 3px 10px;
+    padding-right:64px;
     position:sticky;
     top:0;
     z-index:1000;
@@ -130,6 +131,36 @@ nav::after{
     pointer-events:none;
     background:linear-gradient(to left, rgba(34,34,34,1), rgba(34,34,34,0));
     display:none;
+}
+
+.theme-toggle{
+    margin:0 8px;
+    padding:8px 12px;
+    border:none;
+    border-radius:999px;
+    background:rgba(255,255,255,0.08);
+    color:white;
+    cursor:pointer;
+    font-size:1rem;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    transition:background .25s ease, color .25s ease, transform .25s ease;
+}
+
+.theme-toggle:hover{
+    background:rgba(255,255,255,0.18);
+    transform:translateY(-1px);
+}
+
+/* Position toggle to top-right of the nav */
+.theme-toggle{
+    position:fixed;
+    right:12px;
+    top:12px;
+    transform:none;
+    z-index:2000;
+    box-shadow:0 6px 18px rgba(0,0,0,0.2);
 }
 
 nav a{
@@ -752,17 +783,191 @@ h2 i{
     }
 }
 
+/* Removed automatic system dark mode so manual theme toggle controls the page. */
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+html[data-theme="dark"] body {
+    background: #071428;
+    color: #E6F0FA;
+}
+
+html[data-theme="dark"] header {
+    background: linear-gradient(90deg, #042033, #063a59);
+    color: #E6F0FA;
+}
+
+html[data-theme="dark"] nav{
+    background: linear-gradient(90deg, rgba(6,34,52,0.96), rgba(8,58,89,0.96));
+}
+
+html[data-theme="dark"] nav::after{
+    background: linear-gradient(to left, rgba(6,34,52,1), rgba(6,34,52,0));
+}
+
+/* Surface / cards */
+html[data-theme="dark"] .project-card,
+html[data-theme="dark"] .details-card,
+html[data-theme="dark"] .certification-card,
+html[data-theme="dark"] .contact-card,
+html[data-theme="dark"] .timeline-content,
+html[data-theme="dark"] .modal-content{
+    background: #0b2131;
+    box-shadow: 0 6px 24px rgba(2,6,15,0.6);
+    color: #E6F0FA;
+    border-color: transparent;
+}
+
+/* Subtle accents for tags/icons */
+html[data-theme="dark"] .project-icon,
+html[data-theme="dark"] .project-tags span,
+html[data-theme="dark"] .skill{
+    background: rgba(79,176,255,0.08);
+    color: #7FD1FF;
+    box-shadow:none;
+}
+
+html[data-theme="dark"] a, html[data-theme="dark"] nav a{
+    color: #BFE9FF;
+}
+
+html[data-theme="dark"] nav a:hover{
+    color: #9FDFFF;
+}
+
+html[data-theme="dark"] .theme-toggle{
+    background:#0f1720;
+    color:#7FD1FF;
+    border-color:rgba(127,209,255,0.06);
+    box-shadow:0 8px 26px rgba(3,12,20,0.6);
+}
+
+html[data-theme="dark"] .hero button,
+html[data-theme="dark"] .project-button{
+    background: #185a81;
+    color: #E6F0FA;
+}
+
+html[data-theme="dark"] .section-description,
+html[data-theme="dark"] p,
+html[data-theme="dark"] .contact-card p{
+    color:#B6C6D8;
+}
+
+html[data-theme="dark"] nav {
+    background:#0c1118;
+}
+
+html[data-theme="dark"] nav a {
+    color:#f2f9ff;
+}
+
+html[data-theme="dark"] nav a:hover {
+    color:#7bd1ff;
+}
+
+html[data-theme="dark"] nav::after {
+    background:linear-gradient(to left, rgba(12,17,24,1), rgba(12,17,24,0));
+}
+
+html[data-theme="dark"] section#about,
+html[data-theme="dark"] section#projects,
+html[data-theme="dark"] section#education {
+    background:#0f1724;
+}
+
+html[data-theme="dark"] #skills,
+html[data-theme="dark"] #experience,
+html[data-theme="dark"] #contact {
+    background:#141b2a;
+}
+
+html[data-theme="dark"] .project-card,
+html[data-theme="dark"] .certification-card,
+html[data-theme="dark"] .timeline-content,
+html[data-theme="dark"] .contact-card,
+html[data-theme="dark"] .modal-content,
+html[data-theme="dark"] .details-card {
+    background:#121a26;
+    box-shadow:0 10px 30px rgba(0,0,0,.45);
+}
+
+html[data-theme="dark"] .project-card.placeholder {
+    background:#171f2d;
+    border-color:#2f4258;
+}
+
+html[data-theme="dark"] .project-icon,
+html[data-theme="dark"] .project-tags span {
+    background:#10304f;
+    color:#b7dfff;
+}
+
+html[data-theme="dark"] .hero-text h1,
+html[data-theme="dark"] .hero-text p,
+html[data-theme="dark"] .section-description,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] .skill-category h3,
+html[data-theme="dark"] .issuer,
+html[data-theme="dark"] .cert-date,
+html[data-theme="dark"] .verify-link,
+html[data-theme="dark"] .experience-category,
+html[data-theme="dark"] .timeline-content h3,
+html[data-theme="dark"] .timeline-content h4,
+html[data-theme="dark"] .timeline-content span,
+html[data-theme="dark"] .contact-card h3,
+html[data-theme="dark"] .contact-card p,
+html[data-theme="dark"] .contact-card small,
+html[data-theme="dark"] .project-card p,
+html[data-theme="dark"] .details-card h4 {
+    color:#e6eff9;
+}
+
+html[data-theme="dark"] .section-description,
+html[data-theme="dark"] .project-card p,
+html[data-theme="dark"] .timeline-content span,
+html[data-theme="dark"] .contact-card p,
+html[data-theme="dark"] .contact-card small,
+html[data-theme="dark"] .cert-date,
+html[data-theme="dark"] .issuer {
+    color:#c7d4e2;
+}
+
+html[data-theme="dark"] .skill {
+    background:#0a607b;
+}
+
+html[data-theme="dark"] .project-button {
+    background:#0d6f9f;
+}
+
+html[data-theme="dark"] .project-button:hover {
+    background:#084e6c;
+}
+
+html[data-theme="dark"] .timeline-dot {
+    background:#ffd166;
+    border-color:#0b6e99;
+}
+
+html[data-theme="dark"] .contact-icon {
+    color:#aac2d6;
+}
+
+html[data-theme="dark"] .modal {
+    background:rgba(0,0,0,.8);
+}
+
+html[data-theme="dark"] .close-modal {
+    color:#d1d9e4;
+}
+
 /* Mobile */
 @media (max-width:640px){
 
     #about p{
-        text-align:justify;
-        text-justify:inter-word;
-        text-align-last:left;
-        hyphens:none;
-    }
-
-    section{
         padding:44px 0;
     }
 

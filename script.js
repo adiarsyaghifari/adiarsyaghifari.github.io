@@ -418,3 +418,50 @@ document.addEventListener("keydown",(e)=>{
     }
 
 });
+
+// ===========================
+// Theme Toggle
+// ===========================
+
+const themeToggle = document.getElementById("themeToggle");
+const rootElement = document.documentElement;
+
+function updateThemeIcon(theme){
+    if (!themeToggle) return;
+    themeToggle.innerHTML = theme === "dark"
+        ? '<i class="fas fa-sun"></i>'
+        : '<i class="fas fa-moon"></i>';
+}
+
+function setTheme(theme){
+    if(theme === "dark"){
+        rootElement.setAttribute("data-theme","dark");
+    } else {
+        rootElement.removeAttribute("data-theme");
+    }
+    localStorage.setItem("theme", theme);
+    updateThemeIcon(theme);
+}
+
+function getSavedTheme(){
+    return localStorage.getItem("theme");
+}
+
+function getPreferredTheme(){
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+function initTheme(){
+    const savedTheme = getSavedTheme();
+    const theme = savedTheme || 'light';
+    setTheme(theme);
+}
+
+if(themeToggle){
+    themeToggle.addEventListener("click", ()=>{
+        const current = rootElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        setTheme(current);
+    });
+}
+
+initTheme();
