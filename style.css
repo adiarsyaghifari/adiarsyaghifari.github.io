@@ -599,9 +599,6 @@ h2 i{
     line-height:1.8;
 }
 
-.details-card--full{
-    grid-column:1 / -1;
-}
 
 .details-buttons{
     display:flex;

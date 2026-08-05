@@ -202,7 +202,7 @@ const projects = {
 
             </div>
 
-            <div class="details-card details-card--full">
+            <div class="details-card">
 
                 <h4>
                     <i class="fas fa-lightbulb"></i>
