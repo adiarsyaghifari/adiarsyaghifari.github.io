@@ -333,8 +333,8 @@ h2 i{
 }
 
 .section-description{
-    max-width:700px;
-    margin:14px auto 40px;
+    width:100%;
+    margin:14px 0 40px 0;
     color:#666;
     text-align:justify;
     text-justify:inter-word;
@@ -1047,5 +1047,30 @@ html[data-theme="dark"] .close-modal {
 
     .modal{
         padding:20px 10px;
+    }
+}
+
+/* Mobile tweaks: add horizontal padding so content isn't cramped */
+@media (max-width:600px){
+    .container{
+        padding:0 16px;
+    }
+
+    section{
+        padding:36px 0;
+    }
+
+    .section-description{
+        margin:14px 0 28px 0;
+    }
+
+    nav a{
+        margin:0 8px;
+    }
+
+    .theme-toggle{
+        right:8px;
+        top:10px;
+        padding:8px 10px;
     }
 }
