@@ -129,8 +129,24 @@ nav::after{
     width:48px;
     height:100%;
     pointer-events:none;
-    background:linear-gradient(to left, rgba(34,34,34,1), rgba(34,34,34,0));
+    /* subtle fade to indicate there's more content to the right */
+    background:linear-gradient(to left, rgba(34,34,34,0.32), rgba(34,34,34,0));
     display:none;
+}
+
+/* Arrow indicator for horizontal scroll on small screens */
+nav::before{
+    content:'››';
+    position:absolute;
+    top:50%;
+    right:12px;
+    transform:translateY(-50%);
+    font-size:20px;
+    line-height:1;
+    color:rgba(255,255,255,0.92);
+    pointer-events:none;
+    display:none;
+    text-shadow:0 2px 6px rgba(0,0,0,0.35);
 }
 
 .theme-toggle{
@@ -320,7 +336,10 @@ h2 i{
     max-width:700px;
     margin:14px auto 40px;
     color:#666;
-    text-align:center;
+    text-align:justify;
+    text-justify:inter-word;
+    text-align-last:left;
+    hyphens:none;
     line-height:1.8;
 }
 
@@ -751,6 +770,10 @@ h2 i{
     }
 
     nav::after{
+        display:block;
+    }
+
+    nav::before{
         display:block;
     }
 
