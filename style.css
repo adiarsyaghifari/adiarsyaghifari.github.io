@@ -57,8 +57,6 @@ body{
     --muted-3: #8a949c;
     --primary-dark: #084d6d;
     --muted-4: #888888;
-    --nav-fade-start: rgba(34,34,34,0.32);
-    --nav-fade-end: rgba(34,34,34,0);
     --skill-text: #ffffff;
     --social-link: #E3F2FD;
 }
@@ -166,15 +164,6 @@ nav{
     position:relative;
 }
 
-nav::after{
-    content:'';
-    position:absolute;
-    top:0;
-    right:0;
-    width:48px;
-    height:100%;
-    pointer-events:none;
-}
 
 .theme-toggle{
     margin:0 8px;
@@ -813,14 +802,6 @@ h2 i{
         position:relative;
     }
 
-    nav::after{
-        display:block;
-    }
-
-    nav::before{
-        display:block;
-    }
-
     nav::-webkit-scrollbar{
         display:none;
     }
@@ -888,8 +869,6 @@ html[data-theme="dark"]{
     --button-border: rgba(55,95,118,0.25);
     --button-bg-hover: #234c63;
     --modal-overlay: rgba(0,0,0,.8);
-    --nav-fade-start: rgba(6,34,52,1);
-    --nav-fade-end: rgba(6,34,52,0);
 }
 /* Small dark-mode tweaks that rely on computed variables */
 html[data-theme="dark"] .modal{
