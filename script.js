@@ -465,3 +465,22 @@ if(themeToggle){
 }
 
 initTheme();
+
+// ===========================
+// Toggle visibility on scroll
+// ===========================
+function updateToggleOnScroll(){
+    if(!themeToggle) return;
+    const header = document.querySelector('header');
+    const threshold = header ? header.getBoundingClientRect().height : 80;
+    if(window.scrollY > threshold - 8){
+        themeToggle.classList.add('scrolled');
+    } else {
+        themeToggle.classList.remove('scrolled');
+    }
+}
+
+window.addEventListener('scroll', updateToggleOnScroll, {passive:true});
+window.addEventListener('resize', updateToggleOnScroll);
+// initial set
+updateToggleOnScroll();

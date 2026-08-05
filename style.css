@@ -179,6 +179,22 @@ nav::before{
     box-shadow:0 6px 18px rgba(0,0,0,0.2);
 }
 
+/* When page content under the fixed toggle is light, make the toggle visible */
+.theme-toggle.scrolled{
+    background:#0B6E99;
+    color:#fff;
+    border:1px solid rgba(0,0,0,0.08);
+    box-shadow:0 8px 26px rgba(11,110,153,0.22);
+}
+
+/* Dark mode scrolled state */
+html[data-theme="dark"] .theme-toggle.scrolled{
+    background:#0b3550;
+    color:#E6F0FA;
+    border-color:rgba(127,209,255,0.06);
+    box-shadow:0 8px 26px rgba(2,6,15,0.6);
+}
+
 nav a{
     color:white;
     text-decoration:none;
