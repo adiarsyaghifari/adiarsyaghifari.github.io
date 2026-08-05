@@ -845,6 +845,7 @@ html[data-theme="dark"]{
     --nav-link-hover: #8fc9ee;
     --header-bg: linear-gradient(90deg, #041c2e, #053553);
     --header-text: #E4F3FC;
+    --nav-bg: #051426;
     --card-bg: #0b2030;
     --card-shadow: 0 6px 24px rgba(2,6,15,0.6);
     --card-shadow-soft: 0 10px 30px rgba(0,0,0,.45);
@@ -879,11 +880,11 @@ html[data-theme="dark"] .modal{
 @media (max-width:640px){
 
     #about p{
-        padding:44px 0;
+        padding:20px 0;
     }
 
     header{
-        padding:40px 20px;
+        padding:20px 20px;
     }
 
     h2{
@@ -920,6 +921,11 @@ html[data-theme="dark"] .modal{
     .project-card{
         padding:24px;
     }
+
+    .project-icon{
+        margin-left:auto;
+        margin-right:auto;
+    }
 }
 
 /* Smaller phones */
@@ -928,7 +934,7 @@ html[data-theme="dark"] .modal{
 
     .modal-content{
         width:95%;
-        padding:25px;
+        padding:20px;
         max-height:90vh;
         overflow-y:auto;
     }
