@@ -599,6 +599,10 @@ h2 i{
     line-height:1.8;
 }
 
+.details-card--full{
+    grid-column:1 / -1;
+}
+
 .details-buttons{
     display:flex;
     gap:15px;
@@ -808,10 +812,12 @@ h2 i{
 
 .modal-content{
     background:var(--card-bg);
-    max-width:1100px;
+    max-width:820px;
+    width:min(100%,820px);
     margin:auto;
     border-radius:16px;
-    padding:40px;
+    padding:26px;
+    font-size:0.95rem;
     position:relative;
     animation:modalFade .25s ease;
 }

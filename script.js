@@ -144,16 +144,16 @@ const projects = {
 
                 <h4>
                     <i class="fas fa-circle-question"></i>
-                    Business Problem
+                    Business Context
                 </h4>
 
                 <p>
 
-                    Hospital management lacked visibility into patient throughput,
-                    doctor workload, and resource utilization across multiple
-                    branches. Without operational dashboards, identifying staffing
-                    imbalances and bottlenecks was difficult, leading to inefficient
-                    resource allocation.
+                    As hospital operations expanded across multiple branches, management
+                    needed a centralized dashboard to monitor operational efficiency.
+                    Limited visibility into patient flow, doctor workload, and department
+                    performance made it difficult to identify bottlenecks and allocate
+                    resources effectively.
 
                 </p>
 
@@ -163,7 +163,7 @@ const projects = {
 
                 <h4>
                     <i class="fas fa-user-check"></i>
-                    My Responsibilities
+                    My Role
                 </h4>
 
                 <ul>
@@ -185,25 +185,37 @@ const projects = {
             <div class="details-card">
 
                 <h4>
+                    <i class="fas fa-bullseye"></i>
+                    Objectives
+                </h4>
+
+                <p>
+                    Create a unified Tableau data model from six relational datasets to support cross-branch operational analysis and more informed decision-making.
+                </p>
+
+            </div>
+
+            <div class="details-card">
+
+                <h4>
                     <i class="fas fa-chart-line"></i>
-                    Key Findings
+                    Key Insights
                 </h4>
 
                 <ul>
-
-                    <li>Integrated 6 hospital datasets without introducing duplicate records.</li>
 
                     <li>Identified a 5.5× workload disparity between the busiest and least utilized doctors.</li>
 
                     <li>Internal Medicine and Emergency departments accounted for 37% of operational workload.</li>
 
-                    <li>Detected administrative bottlenecks causing prolonged patient stays despite low doctor utilization.</li>
+                    <li>Identified branches with prolonged patient stays despite relatively low doctor workloads, 
+                    indicating operational inefficiencies beyond staffing capacity.</li>
 
                 </ul>
 
             </div>
 
-            <div class="details-card">
+            <div class="details-card details-card--full">
 
                 <h4>
                     <i class="fas fa-lightbulb"></i>
