@@ -113,7 +113,7 @@ header{
 nav{
     background:#222;
     text-align:center;
-    padding:3px 64px 3px 64px;
+    padding:3px 10px 3px 10px;
     position:sticky;
     top:0;
     z-index:1000;
@@ -179,27 +179,7 @@ nav::before{
 }
 
 /* small logo pinned to left of nav so links don't overlap on mobile */
-.nav-logo{
-    position:absolute;
-    left:12px;
-    top:50%;
-    transform:translateY(-50%);
-    width:44px;
-    height:44px;
-    border-radius:8px;
-    overflow:hidden;
-    z-index:1200;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.nav-logo img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-}
+/* nav logo removed per user request */
 
 /* When page content under the fixed toggle is light, make the toggle visible */
 .theme-toggle.scrolled{
@@ -980,6 +960,11 @@ html[data-theme="dark"] .contact-card p,
 html[data-theme="dark"] .contact-card small,
 html[data-theme="dark"] .project-card p,
 html[data-theme="dark"] .details-card h4 {
+    color:#e6eff9;
+}
+
+/* Ensure About paragraph matches main dark-mode text color */
+html[data-theme="dark"] #about p{
     color:#e6eff9;
 }
 
