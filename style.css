@@ -844,8 +844,8 @@ html[data-theme="dark"]{
     --nav-link: #B6DAF6;
     --nav-link-hover: #8fc9ee;
     --header-bg: linear-gradient(90deg, #041c2e, #053553);
+    --nav-bg: linear-gradient(90deg, #041c2e, #053553);
     --header-text: #E4F3FC;
-    --nav-bg: #051426;
     --card-bg: #0b2030;
     --card-shadow: 0 6px 24px rgba(2,6,15,0.6);
     --card-shadow-soft: 0 10px 30px rgba(0,0,0,.45);
@@ -880,11 +880,11 @@ html[data-theme="dark"] .modal{
 @media (max-width:640px){
 
     #about p{
-        padding:20px 0;
+        padding:15px 0;
     }
 
     header{
-        padding:20px 20px;
+        padding:15px 20px;
     }
 
     h2{
